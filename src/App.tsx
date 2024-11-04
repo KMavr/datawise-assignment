@@ -11,6 +11,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<WeatherAppHub />} />
+          {/*Assuming each activity will navigate to a page with activity details*/}
+          <Route path="/:activity-id" element={<div>Dummy Activity page</div>} />
         </Routes>
       </div>
     </MantineProvider>
