@@ -1,5 +1,6 @@
 import NavBar from '../../navigation/components/NavBar/NavBar.tsx';
 import Activities from '../../activities/components/Activities/Activities.tsx';
+import Forecast from '../../forecast/components/Forecast/Forecast.tsx';
 
 function WeatherAppHub() {
   return (
@@ -11,7 +12,7 @@ function WeatherAppHub() {
       <div className="flex flex-col gap-y-8">
         <Activities />
         {/* Top Component */}
-        <div className="h-full rounded-[40px] bg-white bg-opacity-[27%]"></div>
+        <Forecast />
         {/* Bottom Component */}
       </div>
 
