@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <div className="flex flex-[0.08] flex-col justify-between rounded-[40px] bg-white bg-opacity-[27%]">
       <div className="flex flex-[0.2] items-center justify-evenly">
-        <img src={userImage} alt="user image" width="70rem" height="70rem" />
+        <img src={userImage} alt="user image" width="50rem" height="50rem" />
       </div>
       <div className="flex flex-[0.7] flex-col items-center justify-evenly text-white">
         {ROUTES.map(({ route, routeName, asset }) => {
