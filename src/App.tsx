@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import { Routes, Route } from 'react-router-dom';
+import '@mantine/carousel/styles.css';
 import Header from './header/Header.tsx';
 import WeatherAppHub from './pages/weather/WeatherAppHub.tsx';
 

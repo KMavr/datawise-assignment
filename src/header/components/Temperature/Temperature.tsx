@@ -1,4 +1,4 @@
-import { formatDate } from './utils/dateUtils.ts';
+import { formatDate } from '../../../utils/dateUtils.ts';
 
 interface TemperatureProps {
   classes?: string;

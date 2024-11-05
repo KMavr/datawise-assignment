@@ -1,6 +1,7 @@
 import NavBar from '../../navigation/components/NavBar/NavBar.tsx';
 import Activities from '../../activities/components/Activities/Activities.tsx';
 import Forecast from '../../forecast/components/Forecast/Forecast.tsx';
+import Weather from '../../weather/components/Weather/Weather.tsx';
 
 function WeatherAppHub() {
   return (
@@ -17,7 +18,7 @@ function WeatherAppHub() {
       </div>
 
       {/* Right Component */}
-      <div className="rounded-[40px] bg-white bg-opacity-[27%]"></div>
+      <Weather />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import clockIcon from '../../assets/clockIcon.svg';
+import clockIcon from '../../../weather/assets/clockIcon.svg';
 import ForecastChart from '../ForecastChart/ForecastChart.tsx';
 import { mockData } from './__mocks__/mockData.ts';
 import { IMAGE_MAP } from '../../model/imageMap.ts';
