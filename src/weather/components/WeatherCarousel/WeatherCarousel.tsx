@@ -57,7 +57,7 @@ function WeatherCarousel() {
   };
 
   return (
-    <div className="flex flex-row justify-between px-2 pt-6">
+    <div className="flex flex-row justify-between px-2 pt-6 text-white">
       <div onClick={scrollPrev} className="cursor-pointer">
         <img src={arrowLeft} className="w-4 pt-3" style={{ background: 'transparent' }} />
       </div>

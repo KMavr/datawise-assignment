@@ -32,7 +32,7 @@ function Activities() {
   ];
 
   return (
-    <div className="flex h-full flex-col justify-around rounded-[40px] bg-white bg-opacity-[27%] px-8">
+    <div className="hidden h-full flex-col justify-around rounded-[40px] bg-white bg-opacity-[27%] px-8 md:flex">
       <div className="flex flex-row">
         <img src={heart} alt="activities heart icon" />
         <span className="ml-1 text-2xl font-medium text-white">Activities in your area</span>

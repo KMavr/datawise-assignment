@@ -51,7 +51,7 @@ function App() {
           backgroundPosition: 'center',
         }}>
         <Header />
-        <div className="flex flex-[2] flex-row">
+        <div className="flex flex-[2] flex-row md:flex-col">
           <Routes>
             <Route path="/" element={<WeatherAppHub />} />
             {/*Assuming each activity will navigate to a page with activity details*/}

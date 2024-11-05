@@ -8,7 +8,9 @@ function WeatherCondition() {
     : 'Cloudy';
 
   return (
-    <div className="flex pl-1 text-5xl font-medium text-white">{capitalisedWeatherCondition}</div>
+    <div className="flex pl-1 text-2xl font-medium text-white md:text-5xl">
+      {capitalisedWeatherCondition}
+    </div>
   );
 }
 
