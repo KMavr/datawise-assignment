@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import useWeatherStore from '../store/useWeatherStore.ts';
 
 const useBackground = () => {
   const [background, setBackground] = useState<string>('');
+  const { weatherCondition } = useWeatherStore();
 
   const backgroundImageMap = {
     cloudy: 'src/assets/cloudyBackground.svg',
@@ -10,10 +12,10 @@ const useBackground = () => {
     rainy: 'src/assets/rainyBackground.svg',
   };
   // Assuming this will be fetched from server.
-  const weatherCondition = 'rainy';
 
   useEffect(() => {
-    setBackground(backgroundImageMap[weatherCondition]);
+    // cloudy used as fallback.
+    setBackground(backgroundImageMap[weatherCondition || 'cloudy']);
   }, [weatherCondition]);
 
   return background;

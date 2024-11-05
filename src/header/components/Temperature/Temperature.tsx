@@ -1,11 +1,12 @@
 import { formatDate } from '../../../utils/dateUtils.ts';
+import useWeatherStore from '../../../store/useWeatherStore.ts';
 
 interface TemperatureProps {
   classes?: string;
 }
 
 function Temperature({ classes }: TemperatureProps) {
-  const temperature = 14;
+  const { temperature } = useWeatherStore();
   const currentDate = new Date();
   const formattedDate = formatDate({
     weekday: 'long',

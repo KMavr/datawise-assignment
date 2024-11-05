@@ -1,12 +1,13 @@
 import locationPin from './assets/location-pin.svg';
 import rightArrow from './assets/right-arrow.svg';
+import useWeatherStore from '../../../store/useWeatherStore.ts';
 
 interface LocationProps {
   classes?: string;
 }
 
 function Location({ classes = '' }: LocationProps) {
-  const location = 'New York';
+  const { location } = useWeatherStore();
 
   return (
     <button
