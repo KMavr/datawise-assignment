@@ -2,7 +2,7 @@ import { Location, Temperature, WeatherCondition, WeatherImage } from './compone
 
 function Header() {
   return (
-    <div className="grid h-1/2 grid-cols-2 px-11 pt-6">
+    <div className="grid h-1/3 grid-cols-2 px-11 pt-6">
       <div className="grid h-full grid-rows-[auto,auto,1fr] items-center">
         <Location classes="mb-10" />
         <WeatherCondition classes="ml-1" />
