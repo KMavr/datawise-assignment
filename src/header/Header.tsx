@@ -2,11 +2,15 @@ import { Location, Temperature, WeatherCondition, WeatherImage } from './compone
 
 function Header() {
   return (
-    <div className="grid h-1/3 grid-cols-2 px-11 pt-6">
-      <div className="grid h-full grid-rows-[auto,auto,1fr] items-center">
-        <Location classes="mb-10" />
-        <WeatherCondition classes="ml-1" />
-        <Temperature classes="ml-1" />
+    <div className="flex flex-1 flex-row justify-between px-11 pt-6">
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-[0.5] flex-col justify-evenly">
+          <Location />
+          <WeatherCondition />
+        </div>
+        <div className="flex flex-[0.8] flex-col justify-end">
+          <Temperature />
+        </div>
       </div>
       <div className="flex flex-col items-end justify-center">
         <WeatherImage />

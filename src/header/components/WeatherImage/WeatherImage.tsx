@@ -1,9 +1,17 @@
 import { IMAGE_MAP } from './model/imageMap.ts';
+import useWeatherStore from '../../../store/useWeatherStore.ts';
 
 function WeatherImage() {
-  const weather = 'rainy';
+  const { weatherCondition } = useWeatherStore();
 
-  return <img src={IMAGE_MAP[weather]} alt="Weather image" />;
+  return (
+    <img
+      src={IMAGE_MAP[weatherCondition || 'cloudy']}
+      alt="Weather image"
+      width={'321rem'}
+      height={'321rem'}
+    />
+  );
 }
 
 export default WeatherImage;
