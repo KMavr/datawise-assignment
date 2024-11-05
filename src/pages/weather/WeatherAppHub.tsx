@@ -5,19 +5,12 @@ import Weather from '../../weather/components/Weather/Weather.tsx';
 
 function WeatherAppHub() {
   return (
-    <div className="grid h-2/3 w-full grid-cols-[0.08fr,0.65fr,0.25fr] gap-x-8 px-10 pb-8 pt-5">
-      {/* Left Component */}
+    <div className="flex flex-1 flex-row justify-between gap-x-8 px-10 pb-8 pt-5">
       <NavBar />
-
-      {/* Middle Column with Two Components Stacked */}
-      <div className="flex flex-col gap-y-8">
+      <div className="flex flex-1 flex-col gap-y-8">
         <Activities />
-        {/* Top Component */}
         <Forecast />
-        {/* Bottom Component */}
       </div>
-
-      {/* Right Component */}
       <Weather />
     </div>
   );

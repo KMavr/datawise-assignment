@@ -1,10 +1,6 @@
 import useWeatherStore from '../../../store/useWeatherStore.ts';
 
-interface WeatherConditionProps {
-  classes?: string;
-}
-
-function WeatherCondition({ classes = '' }: WeatherConditionProps) {
+function WeatherCondition() {
   const { weatherCondition } = useWeatherStore();
 
   const capitalisedWeatherCondition = weatherCondition
@@ -12,9 +8,7 @@ function WeatherCondition({ classes = '' }: WeatherConditionProps) {
     : 'Cloudy';
 
   return (
-    <div className={`flex text-5xl font-medium text-white ${classes}`}>
-      {capitalisedWeatherCondition}
-    </div>
+    <div className="flex pl-1 text-5xl font-medium text-white">{capitalisedWeatherCondition}</div>
   );
 }
 

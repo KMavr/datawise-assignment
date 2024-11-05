@@ -9,7 +9,7 @@ function Weather() {
 
   return (
     <div
-      className="flex flex-col items-center justify-between rounded-[40px] bg-white bg-opacity-[27%] text-white"
+      className="flex flex-[0.25] flex-col items-center justify-between rounded-[40px] bg-white bg-opacity-[27%] text-white"
       style={{
         backgroundImage: `url(${background})`,
         backgroundRepeat: 'no-repeat',
@@ -21,7 +21,7 @@ function Weather() {
         <WeatherCarousel />
         <div className="mt-2 flex w-full flex-row items-center justify-center">
           <img src={clockIcon} />
-          <span className="font-mediu ml-1 text-lg">{time} GMT</span>
+          <span className="ml-1 text-lg font-medium">{time} GMT</span>
         </div>
       </div>
       <AirConditions />

@@ -1,11 +1,7 @@
 import { formatDate } from '../../../utils/dateUtils.ts';
 import useWeatherStore from '../../../store/useWeatherStore.ts';
 
-interface TemperatureProps {
-  classes?: string;
-}
-
-function Temperature({ classes }: TemperatureProps) {
+function Temperature() {
   const { temperature } = useWeatherStore();
   const currentDate = new Date();
   const formattedDate = formatDate({
@@ -16,8 +12,8 @@ function Temperature({ classes }: TemperatureProps) {
   })(currentDate).replace(' ', ' | ');
 
   return (
-    <div className={`flex flex-col text-white ${classes}`}>
-      <span className="text-[64px] font-medium">{`${temperature}°C`}</span>
+    <div className="flex flex-col pl-1 text-white">
+      <span className="text-6xl font-medium">{`${temperature}°C`}</span>
       <span className="text-lg font-normal">{formattedDate}</span>
     </div>
   );

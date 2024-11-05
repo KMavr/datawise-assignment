@@ -44,18 +44,20 @@ function App() {
   return (
     <MantineProvider>
       <div
-        className="h-dvh bg-gray-500"
+        className="flex h-dvh flex-col justify-evenly"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
         <Header />
-        <Routes>
-          <Route path="/" element={<WeatherAppHub />} />
-          {/*Assuming each activity will navigate to a page with activity details*/}
-          <Route path="/:activity-id" element={<div>Dummy Activity page</div>} />
-        </Routes>
+        <div className="flex flex-[2] flex-row">
+          <Routes>
+            <Route path="/" element={<WeatherAppHub />} />
+            {/*Assuming each activity will navigate to a page with activity details*/}
+            <Route path="/:activity-id" element={<div>Dummy Activity page</div>} />
+          </Routes>
+        </div>
       </div>
     </MantineProvider>
   );
