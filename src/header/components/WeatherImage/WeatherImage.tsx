@@ -8,8 +8,7 @@ function WeatherImage() {
     <img
       src={IMAGE_MAP[weatherCondition || 'cloudy']}
       alt="Weather image"
-      width={'321rem'}
-      height={'321rem'}
+      className="h-60 w-60 md:h-80 md:w-80"
     />
   );
 }

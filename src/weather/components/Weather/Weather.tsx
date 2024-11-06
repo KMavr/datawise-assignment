@@ -9,7 +9,7 @@ function Weather() {
 
   return (
     <div
-      className="flex flex-[0.25] flex-col items-center justify-between rounded-[40px] bg-white bg-opacity-[27%] text-white"
+      className="hidden flex-[0.25] flex-col items-center justify-between rounded-[40px] bg-white bg-opacity-[27%] text-white md:flex"
       style={{
         backgroundImage: `url(${background})`,
         backgroundRepeat: 'no-repeat',

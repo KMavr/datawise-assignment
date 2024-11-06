@@ -12,7 +12,7 @@ function Temperature() {
   })(currentDate).replace(' ', ' | ');
 
   return (
-    <div className="flex flex-col pl-1 text-white">
+    <div className="flex flex-col items-center pl-1 text-white md:items-start">
       <span className="text-6xl font-medium">{`${temperature}°C`}</span>
       <span className="text-lg font-normal">{formattedDate}</span>
     </div>
