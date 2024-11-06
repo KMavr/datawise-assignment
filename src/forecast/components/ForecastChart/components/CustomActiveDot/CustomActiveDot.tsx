@@ -1,8 +1,8 @@
 import { DotProps } from 'recharts';
 
 const CustomActiveDot = ({
-  cx,
-  cy,
+  cx = 0,
+  cy = 0,
   r,
   payload,
   activeDotPosition,

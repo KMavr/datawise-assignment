@@ -1,6 +1,6 @@
 import { getCurrentTimeIn12HourFormat } from '../../../utils/dateUtils.ts';
 import clockIcon from '../../assets/clockIcon.svg';
-import background from '../../assets/background.svg';
+import background from '../../assets/background.png';
 import WeatherCarousel from '../WeatherCarousel/WeatherCarousel.tsx';
 import AirConditions from '../AirConditions/AirConditions.tsx';
 

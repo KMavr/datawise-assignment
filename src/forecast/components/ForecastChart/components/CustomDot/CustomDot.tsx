@@ -1,8 +1,8 @@
 import { DotProps } from 'recharts';
 
 const CustomDot = ({
-  cx,
-  cy,
+  cx = 0,
+  cy = 0,
   payload,
   setActiveDotPosition,
   isMobileView,

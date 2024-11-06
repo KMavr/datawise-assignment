@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 import useWeatherStore from '../store/useWeatherStore.ts';
+import cloudyBackground from '../assets/cloudyBackground.png';
+import stormyBackground from '../assets/stormyBackground.png';
+import sunnyBackground from '../assets/sunnyBackground.png';
+import rainyBackground from '../assets/rainyBackground.png';
 
 const useBackground = () => {
   const [background, setBackground] = useState<string>('');
   const { weatherCondition } = useWeatherStore();
 
   const backgroundImageMap = {
-    cloudy: 'src/assets/cloudyBackground.svg',
-    stormy: 'src/assets/stormyBackground.svg',
-    sunny: 'src/assets/sunnyBackground.svg',
-    rainy: 'src/assets/rainyBackground.svg',
+    cloudy: cloudyBackground,
+    stormy: stormyBackground,
+    sunny: sunnyBackground,
+    rainy: rainyBackground,
   };
   // Assuming this will be fetched from server.
 

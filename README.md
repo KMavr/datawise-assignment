@@ -1,52 +1,81 @@
 # datawise-assignment
 
-# React + TypeScript + Vite
+This is a weather application, created as a part of the interview process for the position of Senior React Developer in Datawise.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Main technologies
 
-Currently, two official plugins are available:
+- Vite
+- React
+- Typescript
+- Tailwind CSS
+- Mantine UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+Before you begin, ensure you have the following installed:
+• Node.js (v20.x or later)
+• npm
+• Docker (optional, for running in a container)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+Clone the repository to your local machine
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone git@github.com:KMavr/datawise-assignment.git
+cd datawise-assignment
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Install dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+## Running the Project
+
+### 1. Development Mode
+
+To start the project in development mode, which includes hot-reloading:
+
+```bash
+npm run dev
+```
+
+This will run the project locally at http://localhost:5173 (by default).
+
+### 2. Production Mode
+
+To build the application for production:
+
+```bash
+npm run build
+```
+
+After that, to preview the production build:
+
+```bash
+npm run preview
+```
+
+This will serve the built project at http://localhost:4173.
+
+### Docker Setup (Recommended)
+
+To run the application in a Docker container, follow these steps:
+
+#### 1. Build the Docker image by running:
+
+```bash
+docker build -t datawise-assignment .
+```
+
+#### 2. Run the Docker container
+
+To start the Docker container, use:
+
+```bash
+docker run -p 5173:5173 datawise-assignment
+```
+
+This will run the application inside a container and expose it on port 5173. You can access the application at http://localhost:5173.

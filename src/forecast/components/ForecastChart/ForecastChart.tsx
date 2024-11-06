@@ -28,7 +28,7 @@ function ForecastChart({ data }: ForecastChartProps) {
     ...adjustedData,
     {
       time: '',
-      temperature: data.at(-1).temperature - 2,
+      temperature: (data?.at(-1)?.temperature || 0) - 2,
       wind: null,
       weatherCondition: '',
       type: 'invisible',
@@ -50,9 +50,11 @@ function ForecastChart({ data }: ForecastChartProps) {
             stroke="#FFC355"
             connectNulls
             dot={
+              //@ts-expect-error TS expects a payload prop but this is passed by the <Line />
               <CustomDot setActiveDotPosition={setActiveDotPosition} isMobileView={isMobileView} />
             }
             activeDot={
+              //@ts-expect-error TS expects a payload prop but this is passed by the <Line />
               <CustomActiveDot
                 activeDotPosition={activeDotPosition}
                 setActiveDotPosition={setActiveDotPosition}
