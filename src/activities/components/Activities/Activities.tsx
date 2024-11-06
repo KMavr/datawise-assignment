@@ -41,7 +41,7 @@ function Activities() {
         {activities.map(({ activity, distance, image }) => (
           <Link to={`/${activity}`} className="mx-5 flex flex-1 flex-col">
             <img src={image} alt={activity} />
-            <span>{distanceFormatter(distance)}</span>
+            <span>{`${distanceFormatter(distance)} away`}</span>
           </Link>
         ))}
       </div>
