@@ -80,10 +80,10 @@ docker build -t datawise-assignment .
 To start the Docker container, use:
 
 ```bash
-docker run -p 5173:5173 datawise-assignment
+docker run -p 4173:4173 datawise-assignment
 ```
 
-This will run the application inside a container and expose it on port 5173. You can access the application at http://localhost:5173.
+This will run the application inside a container and expose it on port 4173. You can access the application at http://localhost:4173.
 
 ## Project structure and decisions
 
